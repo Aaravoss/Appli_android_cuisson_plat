@@ -1,5 +1,5 @@
-# Appli_android_cuisson_plat
-application permettant de visualiser les
+# Application de gestion de cuisson de plats
+Aplication permettant de visualiser les
 caractéristiques d’une cuisson au four. Les informations pertinentes
 sont : le nom du plat, la durée de la cuisson (en heures et minutes) et la
 température de celle-ci (en degrés)
