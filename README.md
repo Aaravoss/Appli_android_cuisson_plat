@@ -15,5 +15,5 @@ persistance des données de l’application. Les cuissons seront
 enregistrées dans un fichier texte. 
 
 ## Collaborateurs: 
-*Morgan Nayet as Aaravoss
-*Loup Salomé
+* Morgan Nayet as Aaravoss
+* Loup Salomé
