@@ -14,5 +14,6 @@ cuissons présentes lorsque l’application a été quittée. On gèrera donc la
 persistance des données de l’application. Les cuissons seront
 enregistrées dans un fichier texte. 
 
-@author Morgan Nayet as Aaravoss
-@author Loup Salomé
+## Collaborateurs: 
+	Morgan Nayet as Aaravoss
+ 	Loup Salomé
