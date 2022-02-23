@@ -3,6 +3,6 @@
     <dimen name="size_titre">20sp</dimen>
     <dimen name="size_texte">15sp</dimen>
     <dimen name="hauteur_logo">70dp</dimen>
-    <dimen name="marge_bord">15dp</dimen>
+    <dimen name="marge_bord">20dp</dimen>
     <dimen name="marge_bouton">20dp</dimen>
 </resources>
