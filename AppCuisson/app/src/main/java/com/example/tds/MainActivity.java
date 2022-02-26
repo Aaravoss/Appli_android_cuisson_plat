@@ -1,12 +1,17 @@
 package com.example.tds;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+
+import com.example.tds.outils.PageAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.page_afficher);
 
         // variable non interactives UI fond sonore
         mp = MediaPlayer.create(this, R.raw.cake_cover_by_madstalker);
@@ -30,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // variables d'interraction UI
 
         //on associe un écouteur à chaque bouton
-
-        //on enlève le cache sur les EditText de type numberPassword
     }
 
     public void onClick(View view){
@@ -60,6 +63,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //remise en route de la musique là où elle s'est arrêtée
         mp.start();
+    }
+
+    private void configureViewPagerAndTabs(){
+
+        //Get ViewPager from layout
+        ViewPager pager = (ViewPager)findViewById(R.id.activity_main_viewpager);
+
+        //Set Adapter PageAdapter and glue it together
+        pager.setAdapter(new PageAdapter(getSupportFragmentManager(), getResources().getIntArray(R.array.colorPagesViewPager)));
+
+        // 1 - Get TabLayout from layout
+        TabLayout tabs= (TabLayout)findViewById(R.id.activity_main_tabs);
+
+        // 2 - Glue TabLayout and ViewPager together
+        tabs.setupWithViewPager(pager);
+
+        // 3 - Design purpose. Tabs have the same width
+        tabs.setTabMode(TabLayout.MODE_FIXED);
     }
 
     /**

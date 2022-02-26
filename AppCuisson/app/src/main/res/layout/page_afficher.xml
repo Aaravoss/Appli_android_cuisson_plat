@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:stretchColumns="1">
+
+    <TextView
+        android:text="@string/text_afficher_titre"
+        style="@style/titre"
+        />
+
+    <TableRow
+        >
+        <TextView
+            android:gravity="center"
+            android:text="@string/text_afficher_plat"
+            android:layout_column="1"
+            android:layout_span="2"
+            style="@style/afficher_TextView"
+            />
+
+        <TextView
+            android:text="@string/text_afficher_duree"
+            android:layout_column="1"
+            style="@style/afficher_TextView"
+            />
+
+        <TextView
+            android:text="@string/text_afficher_degre"
+            android:layout_column="2"
+            style="@style/afficher_TextView"
+            />
+    </TableRow>
+
+    <ListView
+        style="@style/list_plats"
+        />
+
+</TableLayout>
