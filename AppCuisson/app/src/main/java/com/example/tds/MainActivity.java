@@ -1,7 +1,6 @@
 package com.example.tds;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,9 +8,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-
-import com.example.tds.outils.PageAdapter;
-import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
