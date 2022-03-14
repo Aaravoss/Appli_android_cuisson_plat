@@ -1,8 +1,11 @@
-package com.example.tds.fragments;
+package com.example.tds.outils;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.tds.FragmentAfficher;
+import com.example.tds.FragmentAjouter;
 
 public class PageAdapter extends FragmentStateAdapter {
 
@@ -24,7 +27,7 @@ public class PageAdapter extends FragmentStateAdapter {
             case 0:
                 return FragmentAfficher.newInstance();
             case 1:
-                return null; //TODO remplacer par FragmentAjouter.newInstance(); une fois la page ajouter créée
+                return FragmentAjouter.newInstance();
             default:
                 return null;
         }

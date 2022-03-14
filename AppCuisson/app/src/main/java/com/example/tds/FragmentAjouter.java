@@ -1,24 +1,23 @@
-package com.example.tds.fragments;
+package com.example.tds;
 
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.tds.R;
 
-public class FragmentAfficher extends Fragment {
+public class FragmentAjouter extends Fragment {
 
-    public FragmentAfficher(){
+    public FragmentAjouter(){
         //Required empty public constructor
     }
 
     /**
-     * Factory de la classe FragmentAfficher
-     * @return une nouvelle instance du fragment FragmentAfficher
+     * Factory de la classe FragmentAjouter
+     * @return une nouvelle instance du fragment FragmentAjouter
      */
-    public static FragmentAfficher newInstance(){
-        FragmentAfficher fragment = new FragmentAfficher();
+    public static FragmentAjouter newInstance(){
+        FragmentAjouter fragment = new FragmentAjouter();
         return fragment;
     }
 
@@ -30,6 +29,6 @@ public class FragmentAfficher extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
-        return inflater.inflate(R.layout.page_afficher, container, false);
+        return inflater.inflate(R.layout.page_ajouter, container, false);
     }
 }

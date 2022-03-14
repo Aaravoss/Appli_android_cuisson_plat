@@ -4,4 +4,6 @@
     <string name="text_afficher_plat">Plat</string>
     <string name="text_afficher_duree">Durée</string>
     <string name="text_afficher_degre">Degrés</string>
+    <string name="onglet_en_cours_0">AFFICHER</string>
+    <string name="onglet_en_cours_1">AJOUTER</string>
 </resources>
