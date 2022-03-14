@@ -16,5 +16,4 @@ enregistrées dans un fichier texte.
 
 ## Collaborateurs: 
 * Morgan Nayet as Aaravoss
-* Loup Salomé
 * Gwenaël Bascour
