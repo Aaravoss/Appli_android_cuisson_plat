@@ -1,6 +1,7 @@
 package com.example.tds;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,28 +10,26 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import com.example.tds.fragments.PageAdapter;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText budgetTransport, budgetNuit, budgetRepas, budgetVisiteSortie, cout;
-    private RadioGroup nbJours;
-    private CheckBox repas2DernierJour;
     MediaPlayer mp;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page_afficher);
+        setContentView(R.layout.activity_main);
 
         // variable non interactives UI fond sonore
         mp = MediaPlayer.create(this, R.raw.cake_cover_by_madstalker);
         mp.setLooping(true);
         mp.start();
 
-        // variables d'interraction UI
-
-        //on associe un écouteur à chaque bouton
+        //on récupère un accès sur le ViewPager et associe au main_activity un adaptateur
+        ViewPager2 pager = findViewById(R.id.activity_main_viewpager);
+        pager.setAdapter(new PageAdapter(this));
     }
 
     public void onClick(View view){
