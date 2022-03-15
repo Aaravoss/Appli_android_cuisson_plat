@@ -1,16 +1,19 @@
 package com.example.tds;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.NumberPicker;
+import android.widget.TimePicker;
+
 import com.example.tds.outils.PageAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
+    TimePicker timePicker;
     MediaPlayer mp;
 
     @Override

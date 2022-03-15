@@ -1,15 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".FragmentAjouter"
+    android:orientation="vertical"
+    android:stretchColumns="0,1,2">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="EN COURS DE MAINTENANCE"
-        android:gravity="center"
-        android:textColor="@color/darkred"
-        android:textSize="20dp"
+        android:text="@string/text_ajouter_titre"
+        style="@style/titre"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow>
+        <TextView
+            style="@style/ajouter_TextView"
+            android:text="@string/text_afficher_plat"
+            />
+        <EditText
+            android:id="@+id/choixNomDuPlat"
+            android:hint="@string/placeholder_ajouter_plat"
+            android:layout_marginRight="@dimen/marge_bord"
+            android:layout_span="2"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/text_ajouter_duree"
+            style="@style/ajouter_TextView"
+            />
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:timePickerMode="spinner"
+            android:layout_gravity="left"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            style="@style/ajouter_TextView"
+            android:text="@string/text_ajouter_temperature"
+            />
+        <EditText
+            android:id="@+id/choixTemperature"
+            android:hint="@string/placeholder_ajouter_temperature"
+            android:layout_marginRight="@dimen/marge_bord"
+            android:layout_column="2"
+            />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/boutonEffacer"
+            android:text="@string/bouton_ajouter_effacer"
+            style="@style/bouton"
+            android:layout_column="1"
+            android:onClick="actionEffacer"
+            />
+        <Button
+            android:id="@+id/boutonValider"
+            android:text="@string/bouton_ajouter_valider"
+            style="@style/bouton"
+            android:onClick="actionValider"
+            />
+    </TableRow>
+</TableLayout>

@@ -4,6 +4,13 @@
     <string name="text_afficher_plat">Plat</string>
     <string name="text_afficher_duree">Durée</string>
     <string name="text_afficher_degre">Degrés</string>
+    <string name="text_ajouter_titre">"Description cuisson d'un plat"</string>
+    <string name="text_ajouter_duree">Durée de la cuisson</string>
+    <string name="text_ajouter_temperature">Température</string>
+    <string name="placeholder_ajouter_plat">Nom du plat</string>
+    <string name="placeholder_ajouter_temperature">En °C</string>
+    <string name="bouton_ajouter_effacer">Effacer</string>
+    <string name="bouton_ajouter_valider">Valider</string>
     <string name="onglet_en_cours_0">AFFICHER</string>
     <string name="onglet_en_cours_1">AJOUTER</string>
 </resources>

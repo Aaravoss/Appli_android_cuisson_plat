@@ -13,8 +13,7 @@
         style="@style/titre"
         />
 
-    <TableRow
-        >
+    <TableRow>
         <TextView
             android:gravity="center"
             android:text="@string/text_afficher_plat"
