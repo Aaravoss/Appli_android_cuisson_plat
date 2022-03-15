@@ -8,6 +8,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import com.example.tds.objets.Plat;
+import com.example.tds.outils.OutilCuisson;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class FragmentAjouter extends Fragment {
 
@@ -55,18 +60,55 @@ public class FragmentAjouter extends Fragment {
         boutonValider = (Button) view.findViewById(R.id.boutonValider);
         boutonEffacer = (Button) view.findViewById(R.id.boutonEffacer);
 
+        boutonEffacer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                actionEffacer();
+            }
+        });
+
+        boutonValider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                actionValider();
+            }
+        });
+
+        actionEffacer();
+
         return view;
     }
 
+
     /**
      * Action réalisée lors du clic sur le bouton Valider
-     * @param view
      */
-    public void actionValider(View view) { }
+    public void actionValider() {
+
+
+
+            try {
+                PrintWriter fichier = new PrintWriter(new FileWriter("com/example/tds/donnees.txt"));
+                fichier.print(OutilCuisson.transformeEnChaine(choixNomPlat.getText().toString(),
+                        timePicker.getCurrentHour(),
+                        timePicker.getCurrentMinute(),
+                        Integer.parseInt(choixTemperature.getText().toString())
+                ));
+                fichier.close();
+                actionEffacer();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    }
 
     /**
      * Action réalisée lors du clic sur le bouton Effacer
-     * @param view
      */
-    public void actionEffacer(View view) { }
+    public void actionEffacer() {
+
+        choixNomPlat.setText("");
+        choixTemperature.setText("");
+        timePicker.setCurrentHour(0);
+        timePicker.setCurrentMinute(0);
+    }
 }

@@ -21,6 +21,8 @@
         <EditText
             android:id="@+id/choixNomDuPlat"
             android:hint="@string/placeholder_ajouter_plat"
+            android:maxLength="18"
+            android:maxLines="1"
             android:layout_marginRight="@dimen/marge_bord"
             android:layout_span="2"
             />
@@ -46,6 +48,9 @@
         <EditText
             android:id="@+id/choixTemperature"
             android:hint="@string/placeholder_ajouter_temperature"
+            android:inputType="numberSigned"
+            android:maxLength="3"
+            android:maxLines="1"
             android:layout_marginRight="@dimen/marge_bord"
             android:layout_column="2"
             />

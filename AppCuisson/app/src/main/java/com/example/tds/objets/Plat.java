@@ -37,6 +37,12 @@ public class Plat {
             this.heuresCuisson = heureCuisson;
             this.minutesCuisson = minutesCuisson;
             this.degre = degre;
+        }else{
+            this.nom = null;
         }
+    }
+
+    public String getNom(){
+        return nom;
     }
 }
