@@ -36,6 +36,7 @@
     </TableRow>
 
     <ListView
+        android:id="@+id/list_afficher"
         style="@style/list_plats"
         />
 

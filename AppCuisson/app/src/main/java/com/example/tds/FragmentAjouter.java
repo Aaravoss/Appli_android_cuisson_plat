@@ -8,11 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
-import com.example.tds.objets.Plat;
-import com.example.tds.outils.OutilCuisson;
-import java.io.FileWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class FragmentAjouter extends Fragment {
 
@@ -23,10 +21,7 @@ public class FragmentAjouter extends Fragment {
     private Button boutonValider;
     private Button boutonEffacer;
 
-    private String nomDuPlat;
-    private int dureeHeure;
-    private int dureeMinute;
-    private int temperature;
+    private static final String NOM_FICHIER = "donnees.txt";
 
     public FragmentAjouter(){
         //Required empty public constructor
@@ -85,17 +80,16 @@ public class FragmentAjouter extends Fragment {
      */
     public void actionValider() {
 
-
+        File path = getContext().getFilesDir();
 
             try {
-                PrintWriter fichier = new PrintWriter(new FileWriter("com/example/tds/donnees.txt"));
-                fichier.print(OutilCuisson.transformeEnChaine(choixNomPlat.getText().toString(),
-                        timePicker.getCurrentHour(),
-                        timePicker.getCurrentMinute(),
-                        Integer.parseInt(choixTemperature.getText().toString())
-                ));
-                fichier.close();
+                FileOutputStream writer = new FileOutputStream(new File(path, NOM_FICHIER));
+                writer.write(
+                        "probleme".getBytes()
+                );
+                writer.close();
                 actionEffacer();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
