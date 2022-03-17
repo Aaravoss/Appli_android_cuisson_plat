@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             FileOutputStream fichier = openFileOutput(NOM_FICHIER, Context.MODE_PRIVATE);
             fichier.flush();
             for (int i = 0 ; i < plats.size() ; i++){
-                fichier.write(plats.get(i).getBytes());
+                fichier.write((plats.get(i)+"\n").getBytes());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
