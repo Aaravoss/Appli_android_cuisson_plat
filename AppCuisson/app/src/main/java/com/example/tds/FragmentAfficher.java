@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -46,49 +47,30 @@ public class FragmentAfficher extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-/*
+
+        View view = inflater.inflate(R.layout.page_afficher, container, false);
+
         plats = getListPlats();
 
-        ListView lv = (ListView) getActivity().findViewById(R.id.list_afficher);
+        ListView lv = (ListView) view.findViewById(R.id.list_afficher);
         Toast.makeText(getActivity(), "listview réussi", Toast.LENGTH_LONG).show();
-
 
         lv.setAdapter(
                 new ArrayAdapter<String>(
-                        getActivity(),
+                        getContext(),
                         android.R.layout.simple_list_item_1,
                         plats
                 )
 
         );
+
         Toast.makeText(getActivity(), "setadapter réussi", Toast.LENGTH_LONG).show();
-*/
-        return inflater.inflate(R.layout.page_afficher, container, false);
+
+        return view;
     }
 
-    private ArrayList<String> getListPlats(){
+    public ArrayList<String> getListPlats(){
 
-        ArrayList<String> lesPlats = new ArrayList<String>();
-        String platLu;
-
-        try {
-            BufferedReader fichier =
-                    new BufferedReader(new InputStreamReader(new FileInputStream(NOM_FICHIER)));
-            Toast.makeText(getActivity(), "bufferedreader réussi", Toast.LENGTH_LONG).show();
-
-
-            while ( (platLu = fichier.readLine()) != null ){
-                lesPlats.add(platLu);
-            }
-            fichier.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            Toast.makeText(getActivity(), "FileNotFound", Toast.LENGTH_LONG).show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(getActivity(), "IOException", Toast.LENGTH_LONG).show();
-        }
-
-        return lesPlats;
+        return MainActivity.getPlats();
     }
 }

@@ -8,9 +8,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
+
+import com.example.tds.objets.Plat;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class FragmentAjouter extends Fragment {
 
@@ -80,19 +86,9 @@ public class FragmentAjouter extends Fragment {
      */
     public void actionValider() {
 
-        File path = getContext().getFilesDir();
 
-            try {
-                FileOutputStream writer = new FileOutputStream(new File(path, NOM_FICHIER));
-                writer.write(
-                        "probleme".getBytes()
-                );
-                writer.close();
-                actionEffacer();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        MainActivity.addPlat("test bonjour");
+        actionEffacer();
     }
 
     /**
@@ -103,6 +99,6 @@ public class FragmentAjouter extends Fragment {
         choixNomPlat.setText("");
         choixTemperature.setText("");
         timePicker.setCurrentHour(0);
-        timePicker.setCurrentMinute(0);
+        timePicker.setCurrentMinute(40);
     }
 }
