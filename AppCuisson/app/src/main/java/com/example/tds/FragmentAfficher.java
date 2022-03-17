@@ -53,18 +53,13 @@ public class FragmentAfficher extends Fragment {
         plats = getListPlats();
 
         ListView lv = (ListView) view.findViewById(R.id.list_afficher);
-        Toast.makeText(getActivity(), "listview réussi", Toast.LENGTH_LONG).show();
-
         lv.setAdapter(
                 new ArrayAdapter<String>(
                         getContext(),
                         R.layout.ligne_liste,
                         plats
                 )
-
         );
-
-        Toast.makeText(getActivity(), "setadapter réussi", Toast.LENGTH_LONG).show();
 
         return view;
     }
