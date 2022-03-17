@@ -139,6 +139,10 @@ public class MainActivity extends AppCompatActivity {
         plats.add(plat);
     }
 
+    public static void removePlat(int plat){
+        plats.remove(plat);
+    }
+
     public static ArrayList<String> getPlats(){
         return plats;
     }

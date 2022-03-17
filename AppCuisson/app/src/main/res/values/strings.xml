@@ -13,4 +13,7 @@
     <string name="bouton_ajouter_valider">Valider</string>
     <string name="onglet_en_cours_0">AFFICHER</string>
     <string name="onglet_en_cours_1">AJOUTER</string>
+    <string name="libelle_option1">"voir thermostat"</string>
+    <string name="libelle_option2">"supprimer"</string>
+    <string name="libelle_option3">"annuler"</string>
 </resources>
