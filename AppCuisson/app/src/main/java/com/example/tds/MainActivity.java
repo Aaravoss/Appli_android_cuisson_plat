@@ -3,6 +3,8 @@ package com.example.tds;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
+
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MenuInflater;
@@ -77,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
 
-        //mise en pause de la musique
+        enregistrerListPlats();
+        //mise en pause de la musisque
         mp.pause();
     }
 
@@ -95,16 +98,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void onDestroy() {
         super.onDestroy();
-        File path = getFilesDir();
+        enregistrerListPlats();
+
+    }
+
+    public void enregistrerListPlats(){
 
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream(new File(path, NOM_FICHIER));
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-            try (BufferedWriter writer = new BufferedWriter(outputStreamWriter)) {
-                writer.write("bonjour");
-                fileOutputStream.close();
+            FileOutputStream fichier = openFileOutput(NOM_FICHIER, Context.MODE_PRIVATE);
+            fichier.flush();
+            for (int i = 0 ; i < plats.size() ; i++){
+                fichier.write(plats.get(i).getBytes());
             }
-
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -113,16 +120,13 @@ public class MainActivity extends AppCompatActivity {
     public void getListPlats(String nomFich){
 
         String platLu;
-        File path = getFilesDir();
-        File readFrom = new File(path, nomFich);
 
         try {
-            FileInputStream stream = new FileInputStream(readFrom);
-            BufferedReader fichier = new BufferedReader(new InputStreamReader(stream));
+            InputStreamReader stream = new InputStreamReader(openFileInput(NOM_FICHIER));
+            BufferedReader fichier = new BufferedReader(stream);
             while ( (platLu = fichier.readLine()) != null ){
                 plats.add(platLu);
             }
-            fichier.close();
             stream.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
