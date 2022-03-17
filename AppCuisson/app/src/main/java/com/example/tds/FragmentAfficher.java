@@ -58,7 +58,7 @@ public class FragmentAfficher extends Fragment {
         lv.setAdapter(
                 new ArrayAdapter<String>(
                         getContext(),
-                        android.R.layout.simple_list_item_1,
+                        R.layout.ligne_liste,
                         plats
                 )
 

@@ -6,4 +6,5 @@
     <dimen name="marge_bord">20dp</dimen>
     <dimen name="marge_bas">35dp</dimen>
     <dimen name="marge_bouton">20dp</dimen>
+    <dimen name="size_text_list_plat">30dp</dimen>
 </resources>

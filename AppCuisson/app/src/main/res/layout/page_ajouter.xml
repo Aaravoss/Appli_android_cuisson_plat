@@ -48,9 +48,10 @@
         <EditText
             android:id="@+id/choixTemperature"
             android:hint="@string/placeholder_ajouter_temperature"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:maxLength="3"
             android:maxLines="1"
+
             android:layout_marginRight="@dimen/marge_bord"
             android:layout_column="2"
             />

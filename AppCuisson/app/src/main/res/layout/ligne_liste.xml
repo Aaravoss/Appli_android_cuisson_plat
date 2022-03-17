@@ -1,0 +1,19 @@
+<!--  ce fichier décrit l'aspect visuel des items de la liste des cuissons.
+     Le texte sera affiché en gras avec une taille bien précise.
+     La police de caractères est une police à chasse fixe.
+     (dans le but que les 3 informations : nom du plat, temps de cuisson et
+      température soient bien alignées)
+     Un padding est ajouté autour du texte
+     fichier ligne_liste.xml                               12/21 -->
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:typeface="monospace"
+    android:textStyle="bold"
+    android:textSize="@dimen/size_text_list_plat"
+    android:paddingTop="@dimen/marge_bord"
+    android:paddingBottom="@dimen/marge_bas"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/corail"
+    />

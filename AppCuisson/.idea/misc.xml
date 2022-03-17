@@ -3,12 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/gwenb/OneDrive/Documents/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.172" />
-        <entry key="..\:/Users/gwenb/OneDrive/Documents/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
-        <entry key="..\:/Users/gwenb/OneDrive/Documents/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/activity_main.xml" value="0.24909420289855072" />
-        <entry key="..\:/Users/gwenb/OneDrive/Documents/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_afficher.xml" value="0.24909420289855072" />
-        <entry key="..\:/Users/gwenb/OneDrive/Documents/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_ajouter.xml" value="0.24909420289855072" />
-        <entry key="..\:/Users/gwenb/OneDrive/Documents/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17" />
+        <entry key="..\:/Users/Morgan Nayet/Desktop/Taf/projets/android/app_cuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Morgan Nayet/Desktop/Taf/projets/android/app_cuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_afficher.xml" value="0.1" />
+        <entry key="..\:/Users/Morgan Nayet/Desktop/Taf/projets/android/app_cuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_ajouter.xml" value="0.2" />
+        <entry key="..\:/Users/morgan/Desktop/taf/projet/application mobile/app_cuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/ligne_liste.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/morgan/Desktop/taf/projet/application mobile/app_cuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_afficher.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/morgan/Desktop/taf/projet/application mobile/app_cuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_ajouter.xml" value="0.1" />
         <entry key="..\:/Users/morgan/Desktop/taf/projet/applications_mobiles/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/activity_main.xml" value="0.2401263823064771" />
         <entry key="..\:/Users/morgan/Desktop/taf/projet/applications_mobiles/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_afficher.xml" value="0.1" />
         <entry key="..\:/Users/morgan/Desktop/taf/projet/applications_mobiles/AppCuisson/Appli_android_cuisson_plat/AppCuisson/app/src/main/res/layout/page_ajouter.xml" value="0.16145833333333334" />

@@ -8,15 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
-import com.example.tds.objets.Plat;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import com.example.tds.outils.Plat;
 
 public class FragmentAjouter extends Fragment {
 
@@ -74,7 +68,16 @@ public class FragmentAjouter extends Fragment {
                 actionValider();
             }
         });
+/*
+        choixNomPlat.setOnFocusChangeListener( new View.OnFocusChangeListener() {
 
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if
+            }
+        });
+        choixTemperature.setOnFocusChangeListener(view.getOnFocusChangeListener());
+*/
         actionEffacer();
 
         return view;
@@ -86,9 +89,23 @@ public class FragmentAjouter extends Fragment {
      */
     public void actionValider() {
 
+        Plat nv_plat = null;
 
-        MainActivity.addPlat("test bonjour");
-        actionEffacer();
+        if(!String.valueOf(choixTemperature.getText()).equals("")) {
+            nv_plat = new Plat(
+                    String.valueOf(choixNomPlat.getText()),
+                    timePicker.getCurrentHour(),
+                    timePicker.getCurrentMinute(),
+                    Integer.parseInt(String.valueOf(choixTemperature.getText()))
+            );
+        }
+
+
+        if(nv_plat != null && nv_plat.getNom() != null) {
+
+            MainActivity.addPlat(nv_plat.toString());
+            actionEffacer();
+        }
     }
 
     /**
