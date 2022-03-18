@@ -3,6 +3,7 @@ package com.example.tds;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -13,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.tds.outils.OutilCuisson;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -83,7 +87,7 @@ public class FragmentAfficher extends Fragment {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch(item.getItemId()) {
             case R.id.option_thermostat:
-                // Do some stuff
+                afficherThermostat(info.position);
                 break;
             case R.id.option_supprimer:
                 MainActivity.removePlat(info.position);
@@ -92,6 +96,28 @@ public class FragmentAfficher extends Fragment {
                 break;
         }
         return super.onContextItemSelected(item);
+    }
+
+    public void afficherThermostat(int position){
+
+        View boiteThermostat = getLayoutInflater().inflate(R.layout.thermostat, null);
+
+        TextView text = boiteThermostat.findViewById(R.id.dialog_thermostat);
+        String nomPlat = OutilCuisson.extrairePlat(plats.get(position));
+        int temperature = OutilCuisson.extraireTemperature(plats.get(position));
+
+
+        text.setText(
+                getString(R.string.text_thermostat1) + " " +  nomPlat + "\n\n"
+                + getString(R.string.text_thermostat2) + " " + temperature
+                + getString(R.string.text_thermostat3) + " " + OutilCuisson.thermostat(temperature)
+        );
+
+        new AlertDialog.Builder(getContext())
+                .setTitle(getResources().getString(R.string.titre_thermostat))
+                .setView(boiteThermostat)
+                .setNegativeButton(getResources().getString(R.string.retour), null)
+                .show();
     }
 
     public ArrayList<String> getListPlats(){

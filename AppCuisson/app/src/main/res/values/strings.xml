@@ -16,4 +16,9 @@
     <string name="libelle_option1">"voir thermostat"</string>
     <string name="libelle_option2">"supprimer"</string>
     <string name="libelle_option3">"annuler"</string>
+    <string name="titre_thermostat">Equivalent thermostat</string>
+    <string name="text_thermostat1">Cuisson du plat:</string>
+    <string name="text_thermostat2">Pour obtenir la température de</string>
+    <string name="text_thermostat3">°, vous devez régler votre tour sur le thermostat</string>
+    <string name="retour">retour</string>
 </resources>
