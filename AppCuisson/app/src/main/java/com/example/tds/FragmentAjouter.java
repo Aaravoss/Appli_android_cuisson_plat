@@ -68,16 +68,7 @@ public class FragmentAjouter extends Fragment {
                 actionValider();
             }
         });
-/*
-        choixNomPlat.setOnFocusChangeListener( new View.OnFocusChangeListener() {
 
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if
-            }
-        });
-        choixTemperature.setOnFocusChangeListener(view.getOnFocusChangeListener());
-*/
         actionEffacer();
 
         return view;
@@ -93,7 +84,7 @@ public class FragmentAjouter extends Fragment {
 
         if(!String.valueOf(choixTemperature.getText()).equals("")) {
             nv_plat = new Plat(
-                    String.valueOf(choixNomPlat.getText()),
+                    String.valueOf(choixNomPlat.getText()).trim(),
                     timePicker.getCurrentHour(),
                     timePicker.getCurrentMinute(),
                     Integer.parseInt(String.valueOf(choixTemperature.getText()))

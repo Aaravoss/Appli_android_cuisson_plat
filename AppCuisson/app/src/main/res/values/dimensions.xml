@@ -3,8 +3,8 @@
     <dimen name="size_titre">25sp</dimen>
     <dimen name="size_texte">20sp</dimen>
     <dimen name="hauteur_logo">70dp</dimen>
-    <dimen name="marge_bord">20dp</dimen>
+    <dimen name="marge_bord">10dp</dimen>
     <dimen name="marge_bas">35dp</dimen>
     <dimen name="marge_bouton">20dp</dimen>
-    <dimen name="size_text_list_plat">30dp</dimen>
+    <dimen name="size_text_list_plat">28dp</dimen>
 </resources>

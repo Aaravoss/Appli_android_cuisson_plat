@@ -13,6 +13,8 @@
     android:textSize="@dimen/size_text_list_plat"
     android:paddingTop="@dimen/marge_bord"
     android:paddingBottom="@dimen/marge_bas"
+    android:paddingRight="@dimen/marge_bord"
+    android:paddingLeft="@dimen/marge_bord"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColor="@color/corail"
