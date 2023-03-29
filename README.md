@@ -1,4 +1,4 @@
-# Application de gestion pour la cuisson de plats
+# Application de gestion pour la cuisson de plats (projet IUT)
 Aplication permettant de visualiser les
 caractéristiques d’une cuisson au four. Les informations pertinentes
 sont : le nom du plat, la durée de la cuisson (en heures et minutes) et la
